@@ -26,7 +26,7 @@ if __name__ == '__main__':
             if event.type == button_pressed:
                 for i in range(3):
                     player.board[0][i] = 0
-                #pygame.time.set_timer(button_pressed, 0)
+                pygame.time.set_timer(button_pressed, 0)
                 flag = False
             if event.type == pygame.KEYDOWN:
                 if not flag:

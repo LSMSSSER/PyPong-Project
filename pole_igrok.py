@@ -34,22 +34,22 @@ class Board_player:
 
     def get_click(self, key):
         if key == pygame.K_LEFT:
-            arrow = 0
-        elif key == pygame.K_RIGHT:
-            arrow = 2
-        elif key == pygame.K_UP:
             arrow = 1
+        elif key == pygame.K_RIGHT:
+            arrow = 3
+        elif key == pygame.K_UP:
+            arrow = 2
         else:
             return None
         self.on_click(arrow)
         return arrow
 
     def on_click(self, arrow):
-        if arrow == 0:
+        if arrow == 1:
             self.board[0][0] = 1
-        elif arrow == 1:
-            self.board[0][1] = 1
         elif arrow == 2:
+            self.board[0][1] = 1
+        elif arrow == 3:
             self.board[0][2] = 1
 
 
