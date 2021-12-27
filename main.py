@@ -3,6 +3,7 @@ import random
 
 from Myach import Board_ball
 from pole_igrok import Board_player
+from start_screen import start_screen
 
 SIZE = WIDTH, HEIGHT = 800, 600
 fps = 100
@@ -22,6 +23,7 @@ if __name__ == '__main__':
     flag = False
     board.create_ball()
     pygame.time.set_timer(move_ball, 50)
+    start_screen(screen)
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
