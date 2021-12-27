@@ -10,8 +10,8 @@ class Board_player:
         self.width = width
         self.height = height
         self.board = [[0] * width for _ in range(height)]
-        self.left = 10
-        self.top = 300
+        self.left = 360
+        self.top = 450
         self.cell_size = 30
 
     def set_view(self, left, top, cell_size):
@@ -51,6 +51,12 @@ class Board_player:
             self.board[0][1] = 1
         elif arrow == 3:
             self.board[0][2] = 1
+
+    def get_coords(self):
+        for i in range(3):
+            if self.board[0][i] == 1:
+                return(self.top, self.left + (self.cell_size + 20) * i)
+        return None
 
 
 if __name__ == '__main__':
